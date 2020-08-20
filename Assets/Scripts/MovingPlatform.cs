@@ -16,6 +16,6 @@ public class MovingPlatform : MonoBehaviour
     {
         transform.position-=transform.forward * speed * Time.deltaTime;
 
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 30f);
     }
 }
