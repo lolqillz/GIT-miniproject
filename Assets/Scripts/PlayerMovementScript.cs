@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovementScript : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerMovementScript : MonoBehaviour
     bool isgrounded;
 
     public float jumpheight = 3f;
+
+    public Text Lose_Txt;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +48,18 @@ public class PlayerMovementScript : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = new Vector3(0f, 1.5f, 0f);
+            Time.timeScale = 1f;
+            Lose_Txt.text = null;
+        }
+
+        if(transform.position.y <= -30)
+        {
+            Time.timeScale = 0f;
+            Lose_Txt.text = ("You Lose....");
+        }
     }
 }
