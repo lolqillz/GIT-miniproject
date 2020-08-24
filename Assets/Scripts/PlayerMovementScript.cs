@@ -52,6 +52,7 @@ public class PlayerMovementScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = new Vector3(0f, 1.5f, 0f);
+            Time.timeScale = 1f;
         }
 
         if(transform.position.y <= -30)
