@@ -53,6 +53,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             transform.position = new Vector3(0f, 1.5f, 0f);
             Time.timeScale = 1f;
+            Lose_Txt.text = null;
         }
 
         if(transform.position.y <= -30)
