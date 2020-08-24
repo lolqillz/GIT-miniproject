@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -21,8 +22,17 @@ public class Win : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            print("Win");
-            Win_txt.text = "You Win";
+            if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+            else
+            {
+                print("Win");
+                Win_txt.text = "You Win";
+                Time.timeScale = 0f;
+            }
         }
 
     }
