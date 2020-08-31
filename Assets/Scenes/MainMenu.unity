@@ -410,7 +410,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1078644023}
-        m_MethodName: StartGame
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036d30d1931164845ad91723dc96e448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainGameScene: Level 1
+  SceneName: Level 1
 --- !u!82 &1078644024
 AudioSource:
   m_ObjectHideFlags: 0

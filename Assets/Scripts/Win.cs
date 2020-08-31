@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Win : MonoBehaviour
 {
     public Text Win_txt;
+    public GameObject winButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,8 @@ public class Win : MonoBehaviour
                 print("Win");
                 Win_txt.text = "You Win";
                 Time.timeScale = 0f;
+                winButton.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
             }
         }
 

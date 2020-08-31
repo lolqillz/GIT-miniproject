@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public string MainGameScene;
+    public string SceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,9 @@ public class MenuScript : MonoBehaviour
         
     }
 
-    public void StartGame()
+    public void LoadScene()
     {
-        SceneManager.LoadScene(MainGameScene);
+        SceneManager.LoadScene(SceneName);
     }
 
     public void QuitGame()
