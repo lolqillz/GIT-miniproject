@@ -35,6 +35,7 @@ public class Win : MonoBehaviour
                 Time.timeScale = 0f;
                 winButton.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
         }
 
